@@ -40,8 +40,10 @@ A webpage to see the weather predictions and model performance.
 
 Develop all the project steps with MLOPS in mind.
 
+- Perform an EDA: analyse available data
 - Create a first model on a notebook with downloaded historical data
 - In parallel, set up the production pipeline: collect data in batches, infer in batches, display predictions, evaluate performance
 - Deploy the model inside the pipeline do it automatically with CI/CD
+- Implement continuous learning for our production model
 
 

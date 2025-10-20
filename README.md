@@ -38,7 +38,9 @@ A webpage to see the weather predictions and model performance.
 
 ## Development steps
 
-- Develop a first model on a notebook with downloaded historical data
+Develop all the project steps with MLOPS in mind.
+
+- Create a first model on a notebook with downloaded historical data
 - In parallel, set up the production pipeline: collect data in batches, infer in batches, display predictions, evaluate performance
 - Deploy the model inside the pipeline do it automatically with CI/CD
 

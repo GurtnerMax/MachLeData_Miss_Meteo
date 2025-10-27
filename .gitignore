@@ -19,3 +19,6 @@ notebook/.ipynb_checkpoints/
 
 #IDEA
 .idea
+
+#zed
+.zed/

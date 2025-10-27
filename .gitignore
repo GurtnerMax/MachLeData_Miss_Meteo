@@ -1,6 +1,24 @@
-
 # Python-generated files
 __pycache__/
 
 # Virtual environments
 .venv
+
+# Data used to train the models
+data/raw/
+data/prepared/
+
+# Evaluation results
+evaluation/
+
+# Ignore MacOS files
+.DS_Store
+
+# Ignore jupyter notebook checkpoints
+notebook/.ipynb_checkpoints/
+
+#DVC
+dvc.lock
+
+#IDEA
+.idea

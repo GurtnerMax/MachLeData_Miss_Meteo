@@ -15,12 +15,12 @@ stages:
   train:
     cmd: > 
       python src/train.py
-      data/prepared/meteo_train.parquet
-      data/prepared/meteo_val.parquet
+      data/prepared/train.parquet
+      data/prepared/test.parquet
     deps:
     - src/train.py
     - src/utils/seed.py
-    - data/prepared/meteo_train.parquet
-    - data/prepared/meteo_val.parquet
+    - data/prepared/train.parquet
+    - data/prepared/test.parquet
     outs:
     - model/model.pkl

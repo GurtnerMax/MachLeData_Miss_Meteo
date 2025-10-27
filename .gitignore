@@ -1,4 +1,3 @@
-
 # Python-generated files
 __pycache__/
 
@@ -17,3 +16,6 @@ evaluation/
 
 # Ignore jupyter notebook checkpoints
 notebook/.ipynb_checkpoints/
+
+#IDEA
+.idea

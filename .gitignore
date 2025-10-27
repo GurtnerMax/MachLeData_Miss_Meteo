@@ -17,8 +17,5 @@ evaluation/
 # Ignore jupyter notebook checkpoints
 notebook/.ipynb_checkpoints/
 
-#DVC
-dvc.lock
-
 #IDEA
 .idea

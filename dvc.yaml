@@ -12,3 +12,15 @@ stages:
     - prepare
     outs:
     - data/prepared
+  train:
+    cmd: > 
+      python src/train.py
+      data/prepared/train.parquet
+      data/prepared/test.parquet
+    deps:
+    - src/train.py
+    - src/utils/seed.py
+    - data/prepared/train.parquet
+    - data/prepared/test.parquet
+    outs:
+    - model/model.pkl

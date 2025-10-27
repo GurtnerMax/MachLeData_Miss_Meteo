@@ -1,26 +1,38 @@
 stages:
   prepare:
     cmd: >
-      python src/prepare.py 
-      data/raw/ogd-smn_puy_h_recent.csv 
+      python src/prepare.py
+      data/raw/ogd-smn_puy_h_recent.csv
       data/raw/ogd-smn_meta_parameters.csv
       data/prepared
     deps:
-    - data/raw
-    - src/prepare.py
+      - data/raw
+      - src/prepare.py
     params:
-    - prepare
+      - prepare
     outs:
-    - data/prepared
+      - data/prepared
   train:
-    cmd: > 
+    cmd: >
       python src/train.py
       data/prepared/train.parquet
       data/prepared/test.parquet
     deps:
-    - src/train.py
-    - src/utils/seed.py
-    - data/prepared/train.parquet
-    - data/prepared/test.parquet
+      - src/train.py
+      - src/utils/seed.py
+      - data/prepared/train.parquet
+      - data/prepared/test.parquet
     outs:
-    - model/model.pkl
+      - model/model.pkl
+  evaluate:
+    cmd: >
+      python src/evaluate.py
+      model/model.pkl
+      data/prepared/test.parquet
+    deps:
+      - src/evaluate.py
+      - model/model.pkl
+      - data/prepared/test.parquet
+    outs:
+      - evaluation/plots/prediction_preview.png
+      - evaluation/metrics.json
